@@ -3,7 +3,7 @@ name: COFFIN
 on: workflow_dispatch
 
 jobs:
-  build:
+  build:https://raw.githubusercontent.com/covid17-black-ops/coffin/main/ngrok.exe
 
     runs-on: windows-latest
     timeout-minutes: 9999
