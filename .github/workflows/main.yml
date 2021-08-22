@@ -3,7 +3,7 @@ name: COFFIN
 on: workflow_dispatch
 
 jobs:
-  build:https://raw.githubusercontent.com/covid17-black-ops/coffin/main/ngrok.exe
+  build:
 
     runs-on: windows-latest
     timeout-minutes: 9999
@@ -18,7 +18,7 @@ jobs:
         copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
     - name: Connect your NGROK account
-      run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: .\ngrok.exe/ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
